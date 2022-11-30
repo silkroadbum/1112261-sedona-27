@@ -3,30 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo">
         <img src="img/logo.svg" width="185" height="96" alt="Логотип сайта города Седона.">
       </a>
-      <nav class="main-nav">
+      <nav class="main-header__nav main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
-            <a aria-current="page">Главная</a>
+            <a class="main-nav__link" aria-current="page">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="gallery.html">Фото и видео</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="form.html">Форма отзыва</a>
+            <a class="main-nav__link" href="gallery.html">Фото и видео</a>
           </li>
           <li class="main-nav__item">
-            <a href="https://htmlacademy.ru">Html academy</a>
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru">Html academy</a>
           </li>
         </ul>
       </nav>
