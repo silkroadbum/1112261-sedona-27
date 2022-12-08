@@ -5,11 +5,7 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: repeat(3, 256px);
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -23,14 +19,14 @@
 
     &--with-image {
       display: grid;
-      grid-template-columns: repeat(3, 256px);
+      grid-template-columns: repeat(3, 1fr);
       grid-column-start: 1;
       grid-column-end: -1;
     }
 
     &--with-sublist {
       display: grid;
-      grid-template-columns: repeat(3, 256px);
+      grid-template-columns: repeat(3, 1fr);
       grid-column-start: 1;
       grid-column-end: -1;
 
@@ -38,17 +34,6 @@
         grid-column-start: 2;
         grid-column-end: -1;
       }
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &--with-image {
-      grid-template-columns: repeat(3, 400px);
-    }
-
-    &--with-sublist {
-      display: grid;
-      grid-template-columns: repeat(3, 400px);
     }
   }
 }
