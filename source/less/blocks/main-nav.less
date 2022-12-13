@@ -43,6 +43,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     box-shadow: none;
 
     &::after {
@@ -58,6 +60,11 @@
 
   @media (min-width: @tablet-width) {
     box-shadow: none;
+
+    &:nth-child(3),
+    &:nth-child(7) {
+      grid-column-start: 4;
+    }
   }
 }
 
