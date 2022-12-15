@@ -1,12 +1,5 @@
 .main-nav {
   position: relative;
-  z-index: 3;
-  background-color: #81b3d2;
-
-  @media (min-width: @tablet-width) {
-    background-color: #ffffff;
-    z-index: 1;
-  }
 }
 
 .main-nav__toggle {
@@ -16,21 +9,64 @@
   height: 22px;
   right: 17px;
   top: 17px;
-  background-color: #ffffff; //временно
   border: none;
   cursor: pointer;
   z-index: 2;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+.main-nav--closed .main-nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 4px;
+    background-color: #81b3d2;
+    box-shadow: 0 9px 0 0 #81b3d2, 0 18px 0 0 #81b3d2;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -2px;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 .main-nav__list {
-  position: relative;
+  position: absolute;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  width: 100%;
 
   &::after {
     position: absolute;
@@ -45,7 +81,6 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    box-shadow: none;
 
     &::after {
       display: none;
@@ -53,13 +88,28 @@
   }
 }
 
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+
 .main-nav__item {
+  box-sizing: border-box;
   text-align: center;
   text-transform: uppercase;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #537387;
+  }
+
+  &:not(:first-child) {
+    border-top: 1px solid #9ac2db;
+  }
 
   @media (min-width: @tablet-width) {
-    box-shadow: none;
+    &:not(:last-child),
+    &:not(:first-child) {
+      border: none;
+    }
 
     &:nth-child(3),
     &:nth-child(7) {
@@ -71,14 +121,25 @@
 .main-nav__link {
   display: block;
   color: #ffffff;
+  background-color: #81b3d2;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-decoration: none;
   padding: 17px 20px 12px;
 
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     color: #000000;
+    background-color: transparent;
     font-size: 14px;
     line-height: 21px;
     padding: 18px 10px 17px;
