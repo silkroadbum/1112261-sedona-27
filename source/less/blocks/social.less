@@ -26,7 +26,7 @@
     opacity: 0.3;
   }
 
-  &--vkontakte::before {
+  &::before {
     content: "";
     position: absolute;
     width: 24px;
@@ -34,34 +34,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url("../img/vk-icon.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+  }
+
+  &--vkontakte::before {
+    background-image: url("../img/vk-icon.svg");
   }
 
   &--telegram::before {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-image: url("../img/telegram-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
   }
 
   &--youtube::before {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-image: url("../img/youtube-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
   }
 }

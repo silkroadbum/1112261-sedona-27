@@ -1,6 +1,6 @@
 .benefits {
   margin: 0;
-  padding: 0;
+  padding: 23px 20px 46px;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
@@ -10,13 +10,54 @@
 }
 
 .benefits__item {
-  padding: 23px 20px 25px;
+  position: relative;
+  padding-left: 47px;
+  padding-top: 8px;
   background-color: #ffffff;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &--houses::before {
+    background-image: url("../img/house-icon.svg");
+  }
+
+  &--food::before {
+    background-image: url("../img/food-icon.svg");
+  }
+
+  &--souvenirs::before {
+    background-image: url("../img/gift-icon.svg");
+  }
 
   @media (min-width: @tablet-width) {
     padding: 158px 33px 61px;
+    margin: 0;
+    text-align: center;
+
+    &::before {
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 81px;
+      height: 75px;
+      background-size: contain;
+    }
   }
 
   @media (min-width: @desktop-width) {
