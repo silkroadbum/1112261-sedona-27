@@ -7,6 +7,8 @@
 
 .review__field-group {
   border: none;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     &--impression,
@@ -72,17 +74,80 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  &:checked + .review__input-button--radio::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: #333333;
+    border-radius: 50%;
+  }
+
+  &:checked + .review__input-button--checkbox::after,
+  &:checked + .review__input-button--checkbox::before {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #333333;
+    border-radius: 1px;
+  }
+
+  &:checked + .review__input-button--checkbox::after {
+    width: 3px;
+    height: 20px;
+    transform: rotate(45deg);
+    top: 14px;
+    left: 25px;
+  }
+
+  &:checked + .review__input-button--checkbox::before {
+    top: 20px;
+    left: 15px;
+    width: 3px;
+    height: 13px;
+    transform: rotate(-45deg);
+  }
 }
 
 .review__control-label {
-  display: block;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 62px;
   color: #000000;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  min-height: 46px;
+
+  &:last-child {
+    margin: 0;
+  }
 
   &--capitalize {
     text-transform: capitalize;
+  }
+
+  &:hover .review__input-button {
+    background-color: #e5e5e5;
+  }
+
+  &:active .review__input-button {
+    background-color: #d5d5d5;
+  }
+
+  &:active .review__input-button::after,
+  &:active .review__input-button::before {
+    background-color: rgba(51, 51, 51, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
   }
 }
 
@@ -111,4 +176,21 @@
   line-height: 21px;
   text-transform: uppercase;
   text-align: right;
+}
+
+.review__input-button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    border-radius: 4px;
+  }
 }
