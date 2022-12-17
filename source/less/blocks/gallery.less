@@ -4,6 +4,7 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
+    padding: 0 60px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -14,17 +15,37 @@
 }
 
 .gallery__item {
+  padding: 0 20px;
   border-bottom: 1px solid #e5e5e5;
 
   &:first-child {
     grid-column: 1 / -1;
     border-top: 1px solid #e5e5e5;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+
+    &:first-child {
+      border: none;
+    }
+  }
 }
 
 .gallery__image {
   display: block;
   margin-bottom: 15px;
+}
+
+.gallery__image-info {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px 15px;
+    background-color: #f2f2f2;
+  }
 }
 
 .gallery__title {
@@ -35,12 +56,31 @@
 }
 
 .gallery__author {
-  margin-bottom: 11px;
+  display: block;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .gallery__likes {
+  position: relative;
   display: block;
   color: #000000;
   font-weight: 700;
   text-align: left;
+  padding-left: 37px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 23px;
+    height: 21px;
+    background-image: url("../img/like-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 }
