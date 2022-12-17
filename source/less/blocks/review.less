@@ -87,29 +87,17 @@
     border-radius: 50%;
   }
 
-  &:checked + .review__input-button--checkbox::after,
-  &:checked + .review__input-button--checkbox::before {
+  &:checked + .review__input-button--checkbox::after {
     content: "";
     position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #333333;
-    border-radius: 1px;
-  }
-
-  &:checked + .review__input-button--checkbox::after {
-    width: 3px;
-    height: 20px;
-    transform: rotate(45deg);
-    top: 14px;
-    left: 25px;
-  }
-
-  &:checked + .review__input-button--checkbox::before {
-    top: 20px;
-    left: 15px;
-    width: 3px;
-    height: 13px;
-    transform: rotate(-45deg);
+    width: 22px;
+    height: 16px;
+    background-color: transparent;
+    background-image: url("../img/tick-icon.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -141,9 +129,8 @@
     background-color: #d5d5d5;
   }
 
-  &:active .review__input-button::after,
-  &:active .review__input-button::before {
-    background-color: rgba(51, 51, 51, 0.3);
+  &:active .review__input-button::after {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
