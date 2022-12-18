@@ -12,7 +12,7 @@
         <a class="main-header__logo" href="index.html">
           <img src="img/logo.svg" width="185" height="96" alt="Логотип сайта города Седона.">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -23,8 +23,8 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="gallery.html">Фото и видео</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link" href="form.html" aria-current="page">Форма отзыва</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="form.html" aria-current="page">Форма отзыва</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="https://htmlacademy.ru">Html academy</a>
@@ -74,41 +74,48 @@
             <fieldset class="review__field-group review__field-group--impression">
               <legend class="review__title">Ваше общее впечатление:</legend>
               <label class="review__control-label">
-                <input class="review__input" type="radio" name="impression" value="positive" checked>
+                <input class="review__input-control visually-hidden" type="radio" name="impression" value="positive" checked>
+                <span class="review__input-button review__input-button--radio"></span>
                 Скорее положительное
               </label>
               <label class="review__control-label">
-                <input class="review__input" type="radio" name="impression" value="negative">
+                <input class="review__input-control visually-hidden" type="radio" name="impression" value="negative">
+                <span class="review__input-button review__input-button--radio"></span>
                 Скорее отрицательное
               </label>
               <label class="review__control-label">
-                <input class="review__input" type="radio" name="impression" value="unknown">
+                <input class="review__input-control visually-hidden" type="radio" name="impression" value="unknown">
+                <span class="review__input-button review__input-button--radio"></span>
                 Затрудняюсь ответить
               </label>
             </fieldset>
             <fieldset class="review__field-group review__field-group--attraction">
               <legend class="review__title">Посещенные достопримечательности:</legend>
               <label class="review__control-label review__control-label--capitalize">
-                <input class="review__input-control" type="checkbox" name="bridge-devil" checked>
+                <input class="review__input-control visually-hidden" type="checkbox" name="bridge-devil" checked>
+                <span class="review__input-button review__input-button--checkbox"></span>
                 Мост дьявола
               </label>
               <label class="review__control-label review__control-label--capitalize">
-                <input class="review__input" type="checkbox" name="mount-bell" checked>
+                <input class="review__input-control visually-hidden" type="checkbox" name="mount-bell" checked>
+                <span class="review__input-button review__input-button--checkbox"></span>
                 Гора-колокол
               </label>
               <label class="review__control-label">
-                <input class="review__input" type="checkbox" name="slide-park" checked>
+                <input class="review__input-control visually-hidden" type="checkbox" name="slide-park" checked>
+                <span class="review__input-button review__input-button--checkbox"></span>
                 Слайд-парк
               </label>
               <label class="review__control-label">
-                <input class="review__input" type="checkbox" name="red-rocks">
+                <input class="review__input-control visually-hidden" type="checkbox" name="red-rocks">
+                <span class="review__input-button review__input-button--checkbox"></span>
                 Красные скалы
               </label>
             </fieldset>
             <fieldset class="review__field-group review__field-group--comment">
               <legend class="review__title">Опишите свои эмоции:</legend>
               <label class="visually-hidden" for="comment">Поле ввода комментария:</label>
-              <textarea class="review__comment" name="review-comment" id="comment">Опишите подробно все свои восторги</textarea>
+              <textarea class="review__comment" name="review-comment" id="comment" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <button class="review__button button" type="submit">Отправить отзыв</button>
             <span class="review__note"><sup>*</sup> — обязательные поля</span>
@@ -147,5 +154,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

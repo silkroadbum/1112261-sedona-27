@@ -7,12 +7,30 @@
 
 .review__field-group {
   border: none;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     &--impression,
     &--attraction,
     &--comment {
       grid-column: 1 / -1;
+    }
+
+    &--impression,
+    &--attraction {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--impression {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--attraction {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
@@ -56,16 +74,67 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  &:checked + .review__input-button--radio::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: #333333;
+    border-radius: 50%;
+  }
+
+  &:checked + .review__input-button--checkbox::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 16px;
+    background-color: transparent;
+    background-image: url("../img/tick-icon.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .review__control-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 62px;
   color: #000000;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  min-height: 46px;
+
+  &:last-child {
+    margin: 0;
+  }
 
   &--capitalize {
     text-transform: capitalize;
+  }
+
+  &:hover .review__input-button {
+    background-color: #e5e5e5;
+  }
+
+  &:active .review__input-button {
+    background-color: #d5d5d5;
+  }
+
+  &:active .review__input-button::after {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
   }
 }
 
@@ -80,11 +149,15 @@
   width: 100%;
   border: none;
   background-color: #f2f2f2;
+  color: #000000;
   padding: 16px;
-  color: rgba(0, 0, 0, 0.3);
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .review__note {
@@ -94,4 +167,21 @@
   line-height: 21px;
   text-transform: uppercase;
   text-align: right;
+}
+
+.review__input-button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    border-radius: 4px;
+  }
 }

@@ -12,7 +12,7 @@
         <a class="main-header__logo" href="index.html">
           <img src="img/logo.svg" width="185" height="96" alt="Логотип сайта города Седона.">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -20,8 +20,8 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link" href="gallery.html" aria-current="page">Фото и видео</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="gallery.html" aria-current="page">Фото и видео</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Форма отзыва</a>
@@ -46,27 +46,55 @@
           <ul class="gallery__list">
             <li class="gallery__item">
               <img class="gallery__image" src="#" width="280" height="280" alt="Дорога ведущая в город Седона на закате.">
-              <h3 class="gallery__title">Неродные просторы</h3>
-              <span class="gallery__author">Автор фото: Борис</span>
-              <b class="gallery__likes">1350</b>
+              <div class="gallery__image-info">
+                <div class="gallery__description">
+                  <h3 class="gallery__title">Неродные просторы</h3>
+                  <span class="gallery__author">Автор фото: Борис</span>
+                </div>
+                <div class="gallery__likes_block">
+                  <span class="visually-hidden">Количество лайков:</span>
+                  <b class="gallery__likes">1350</b>
+                </div>
+              </div>
             </li>
             <li class="gallery__item">
               <img class="gallery__image" src="#" width="280" height="280" alt="Цветущий какстус на фоне гор.">
-              <h3 class="gallery__title">Местная растительность</h3>
-              <span class="gallery__author">Автор фото: Сергей</span>
-              <b class="gallery__likes">143</b>
+              <div class="gallery__image-info">
+                <div class="gallery__description">
+                  <h3 class="gallery__title">Местная растительность</h3>
+                  <span class="gallery__author">Автор фото: Сергей</span>
+                </div>
+                <div class="gallery__likes_block">
+                  <span class="visually-hidden">Количество лайков:</span>
+                  <b class="gallery__likes">143</b>
+                </div>
+              </div>
             </li>
             <li class="gallery__item">
               <img class="gallery__image" src="#" width="280" height="280" alt="Дорога идущая серпантином в горах.">
-              <h3 class="gallery__title">Дорога на север</h3>
-              <span class="gallery__author">Автор фото: Петр</span>
-              <b class="gallery__likes">96</b>
+              <div class="gallery__image-info">
+                <div class="gallery__description">
+                  <h3 class="gallery__title">Дорога на север</h3>
+                  <span class="gallery__author">Автор фото: Петр</span>
+                </div>
+                <div class="gallery__likes_block">
+                  <span class="visually-hidden">Количество лайков:</span>
+                  <b class="gallery__likes">96</b>
+                </div>
+              </div>
             </li>
             <li class="gallery__item">
               <img class="gallery__image" src="#" width="280" height="280" alt="Красивый вид моста дьявола.">
-              <h3 class="gallery__title">Мост дьявола</h3>
-              <span class="gallery__author">Автор фото: Антон</span>
-              <b class="gallery__likes">254</b>
+              <div class="gallery__image-info">
+                <div class="gallery__description">
+                  <h3 class="gallery__title">Мост дьявола</h3>
+                  <span class="gallery__author">Автор фото: Антон</span>
+                </div>
+                <div class="gallery__likes_block">
+                  <span class="visually-hidden">Количество лайков:</span>
+                  <b class="gallery__likes">254</b>
+                </div>
+              </div>
             </li>
           </ul>
         </section>
@@ -111,5 +139,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

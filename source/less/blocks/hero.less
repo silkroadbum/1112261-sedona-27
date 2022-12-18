@@ -1,18 +1,20 @@
 .hero {
   color: #ffffff;
   background-color: #000000;
-  background-image: url("../img/hero-background.jpg");
-  background-position: 50%;
+  background-image: url("../img/hero-background-small.jpg");
+  background-position: 50% 50%;
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
   padding: 90px 20px 85px;
 
   @media (min-width: @tablet-width) {
+    background-image: url("../img/hero-background-medium.jpg");
     padding: 77px 33px 91px;
   }
 
   @media (min-width: @desktop-width) {
+    background-image: url("../img/hero-background-large.jpg");
     padding: 78px 50px 90px;
   }
 }

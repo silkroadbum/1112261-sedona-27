@@ -2,10 +2,20 @@
   padding: 39px 20px 23px;
   background-color: #ffffff;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .main-footer__info {
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .main-footer__hashtag {
@@ -18,4 +28,8 @@
 
 .main-footer__social {
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
