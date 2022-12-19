@@ -11,17 +11,16 @@
 
 .advantages__item {
   @media (min-width: @tablet-width) {
-    .advantages__image {
-      display: block;
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-
     &--with-image {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-start: 1;
       grid-column-end: -1;
+    }
+
+    .advantages__image {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
 
     &--with-sublist {

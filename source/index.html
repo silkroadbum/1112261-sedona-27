@@ -38,7 +38,11 @@
 
       <main class="main-index">
         <header class="hero">
-          <img class="hero__image" src="#" width="282" height="214" alt="Welcome to the gorgeous Sedona because the grand canyon lucks!">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/welcome-to-sedona-desktop.svg" width="460" height="350">
+            <source media="(min-width: 768px)" srcset="img/welcome-to-sedona-tablet.svg" width="461" height="350">
+            <img class="hero__image" src="img/welcome-to-sedona-mobile.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona because the grand canyon lucks!">
+          </picture>
         </header>
         <h1 class="visually-hidden">Городок Седона</h1>
         <section class="description">
@@ -54,7 +58,7 @@
                 <span class="advantages__count">№1</span>
                 <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
-              <img class="advantages__image" src="#" width="320" height="260" alt="Красивый вид городка Седоны с видом на местное кафе.">
+              <img class="advantages__image" src="img/sedona-view-mobile.jpg" width="320" height="260" alt="Красивый вид городка Седоны с видом на местное кафе.">
               <ul class="advantages__sublist benefits">
                 <li class="benefits__item benefits__item--houses">
                   <h4 class="benefits__title">Жилье</h4>
