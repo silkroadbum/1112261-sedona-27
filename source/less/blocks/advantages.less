@@ -13,25 +13,12 @@
   @media (min-width: @tablet-width) {
     &--with-image {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-start: 1;
-      grid-column-end: -1;
-    }
-
-    .advantages__image {
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-
-    &--with-sublist {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 2fr 1fr;
       grid-column-start: 1;
       grid-column-end: -1;
 
-      .advantages__image {
-        grid-column-start: 2;
-        grid-column-end: -1;
+      &:first-child {
+        grid-template-columns: 1fr 2fr;
       }
     }
   }
@@ -54,6 +41,10 @@
 
   @media (min-width: @tablet-width) {
     padding: 42px 33px 41px;
+
+    &--with-border {
+      border: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
