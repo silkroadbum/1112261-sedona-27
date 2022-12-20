@@ -8,14 +8,26 @@
   text-align: center;
   padding: 90px 20px 85px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-background-small@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     background-image: url("../img/hero-background-medium.jpg");
     padding: 77px 33px 91px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-background-medium@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/hero-background-large.jpg");
     padding: 78px 50px 90px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-background-large@2x.jpg");
+    }
   }
 }
 
