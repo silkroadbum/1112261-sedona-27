@@ -69,23 +69,20 @@
   }
 }
 
+.gallery__likes-block {
+  display: flex;
+  align-items: center;
+}
+
 .gallery__likes {
-  position: relative;
-  display: block;
   color: #000000;
   font-weight: 700;
   text-align: left;
-  padding-left: 37px;
+  padding-left: 10px;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    width: 23px;
-    height: 21px;
-    background-image: url("../img/icons/like-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
+.gallery__likes-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
