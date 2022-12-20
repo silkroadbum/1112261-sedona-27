@@ -11,6 +11,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0;
   }
 }
 
@@ -36,6 +37,10 @@
 .gallery__image {
   display: block;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .gallery__image-info {
@@ -79,7 +84,7 @@
     left: 0;
     width: 23px;
     height: 21px;
-    background-image: url("../img/like-icon.svg");
+    background-image: url("../img/icons/like-icon.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
