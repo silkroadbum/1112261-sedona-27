@@ -69,8 +69,32 @@
 }
 
 .review__control {
+  position: relative;
   padding-left: 16px;
   text-transform: uppercase;
+  display: block;
+}
+
+.review__input-icon {
+  position: absolute;
+  display: block;
+  width: 58px;
+  height: 58px;
+  border: none;
+  background-color: #e6e6e6;
+  right: 0;
+
+  &--phone {
+    background-image: url("../img/icons/phone-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--email {
+    background-image: url("../img/icons/mail-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }
 
 .review__text-field {
@@ -84,6 +108,11 @@
   border: none;
   width: 100%;
   outline: none;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
