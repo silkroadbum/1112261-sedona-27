@@ -11,6 +11,7 @@ import svgstore from "gulp-svgstore";
 import del from "del";
 import autoprefixer from "autoprefixer";
 import browser from "browser-sync";
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
@@ -28,7 +29,9 @@ export const styles = () => {
 // HTML
 
 const html = () => {
-  return gulp.src("source/*.html").pipe(gulp.dest("build"));
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
 };
 
 // Scripts
