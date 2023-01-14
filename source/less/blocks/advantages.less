@@ -15,6 +15,8 @@
 }
 
 .advantages__item {
+  min-height: 168px;
+
   &--reverse-order {
     display: flex;
     flex-direction: column-reverse;
@@ -50,6 +52,7 @@
   background-color: #eeeeee;
   text-align: center;
   text-transform: uppercase;
+  min-height: 100%;
 
   &--with-image {
     color: #ffffff;
@@ -73,10 +76,13 @@
 
   @media (min-width: @tablet-width) {
     padding: 42px 33px 41px;
-    min-height: 100%;
 
     &--with-border {
       border: none;
+
+      &::after {
+        display: none;
+      }
     }
   }
 
