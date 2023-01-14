@@ -47,17 +47,32 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 158px 33px 61px;
+    padding: 158px 40px 61px;
     margin: 0;
     text-align: center;
 
     &::before {
-      top: 60px;
+      top: 58px;
       left: 50%;
       transform: translateX(-50%);
       width: 81px;
       height: 75px;
       background-size: contain;
+    }
+
+    &--food {
+      padding-top: 156px;
+    }
+
+    &--souvenirs {
+      padding-top: 152px;
+    }
+
+    &--souvenirs::before {
+      left: 51%;
+      top: 62px;
+      width: 81px;
+      height: 76px;
     }
   }
 
@@ -76,9 +91,16 @@
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
+    margin-bottom: 22px;
   }
 }
 
 .benefits__description {
   margin: 0;
+}
+
+.benefits__line-break {
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }

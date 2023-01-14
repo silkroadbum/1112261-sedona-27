@@ -2,6 +2,10 @@
   padding: 39px 20px 49px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 61px 33px 59px;
+  }
 }
 
 .offer__title {
@@ -14,12 +18,17 @@
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
+    margin-bottom: 32px;
   }
 }
 
 .offer__text {
   margin: 0;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .offer__button {
@@ -29,5 +38,11 @@
 
   @media (min-width: @tablet-width) {
     width: 458px;
+  }
+}
+
+.offer__line-break {
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
