@@ -53,8 +53,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 20px 15px;
+    padding: 22px 20px 16px;
     background-color: #f2f2f2;
+
+    &--darker-background {
+      background-color: #eaeaea;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -68,6 +72,10 @@
 
 .gallery__description {
   margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .gallery__title {
@@ -105,6 +113,10 @@
   font-weight: 700;
   text-align: left;
   padding-left: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 9px;
+  }
 
   @media (min-width: @desktop-width) {
     color: #ffffff;

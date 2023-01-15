@@ -21,10 +21,37 @@
 
   @media (min-width: @tablet-width) {
     padding: 48px 100px 56px;
+
+    &--video-preview {
+      padding-bottom: 89px;
+
+      .description__title {
+        font-size: 30px;
+        line-height: 26px;
+        margin-bottom: 31px;
+      }
+    }
+
+    &--video-block {
+      padding-top: 66px;
+      padding-bottom: 81px;
+
+      .description__title {
+        font-size: 30px;
+        line-height: 26px;
+        margin-bottom: 32px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 99px 60px 44px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 61px 177px 44px;
+    &--video-block {
+      padding: 98px 60px 90px;
+    }
   }
 }
 
@@ -61,6 +88,12 @@
 }
 
 .description__transfer {
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.description__line-break {
   @media (min-width: @tablet-width) {
     display: block;
   }
