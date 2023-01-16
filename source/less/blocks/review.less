@@ -103,6 +103,26 @@
 
       .review__title {
         margin-bottom: 14px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 123px;
+          height: 1px;
+          background-color: #dbdbdb;
+          top: 45%;
+          left: -123px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 123px;
+          height: 1px;
+          background-color: #dbdbdb;
+          top: 45%;
+          left: 100%;
+        }
       }
     }
 
@@ -115,6 +135,26 @@
 
       .review__title {
         margin-bottom: 12px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 123px;
+          height: 1px;
+          background-color: #dbdbdb;
+          top: 47%;
+          left: -123px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 123px;
+          height: 1px;
+          background-color: #dbdbdb;
+          top: 47%;
+          left: 100%;
+        }
       }
     }
 
@@ -157,6 +197,32 @@
     &--comment {
       padding-top: 19px;
       margin-bottom: 4px;
+
+      .review__title {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 123px;
+          height: 1px;
+          background-color: #dbdbdb;
+          top: 45%;
+          left: -123px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 123px;
+          height: 1px;
+          background-color: #dbdbdb;
+          top: 45%;
+          left: 100%;
+        }
+      }
     }
 
     &::before {
@@ -173,6 +239,15 @@
       .review__title {
         margin-bottom: 30px;
         margin-right: 42px;
+
+        &::before {
+          width: 280px;
+          left: -280px;
+        }
+
+        &::after {
+          width: 280px;
+        }
       }
 
       .review__control-label {
@@ -189,6 +264,15 @@
 
       .review__title {
         margin-bottom: 43px;
+
+        &::before {
+          width: 280px;
+          left: -280px;
+        }
+
+        &::after {
+          width: 280px;
+        }
       }
     }
 
@@ -220,11 +304,23 @@
       width: 768px;
       margin: 0 auto;
       margin-bottom: 4px;
+
+      .review__title {
+        &::before {
+          width: 280px;
+          left: -280px;
+        }
+
+        &::after {
+          width: 280px;
+        }
+      }
     }
   }
 }
 
 .review__title {
+  position: relative;
   margin: 0;
   margin-bottom: 20px;
   color: #000000;
