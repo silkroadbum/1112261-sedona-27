@@ -11,7 +11,7 @@ import svgstore from "gulp-svgstore";
 import del from "del";
 import autoprefixer from "autoprefixer";
 import browser from "browser-sync";
-import htmlmin from 'gulp-htmlmin';
+import htmlmin from "gulp-htmlmin";
 
 // Styles
 
