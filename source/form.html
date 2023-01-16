@@ -53,36 +53,40 @@
             <p class="description__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </header>
           <form class="review__form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="review__field-group">
-              <legend class="review__title">Представьтесь:</legend>
-              <label class="review__control" for="name">
-                Имя<sup>*</sup>:
-              </label>
-              <input class="review__text-field" type="text" name="name" id="name" placeholder="Введите ваше имя" value="Пётр" required>
-              <label class="review__control" for="surname">
-                Фамилия<sup>*</sup>:
-              </label>
-              <input class="review__text-field" type="text" name="surname" id="surname" placeholder="Введите вашу фамилию" value="Пустота" required>
-              <label class="review__control" for="patronymic">
-                Отчество:
-              </label>
-              <input class="review__text-field" type="text" name="patronymic" id="patronymic" placeholder="Введите ваше отчество" value="Викторович">
-            </fieldset>
-            <fieldset class="review__field-group">
-              <legend class="review__title">Контактная информация:</legend>
-              <label class="review__control" for="contact-phone">
-                Контактный телефон<sup>*</sup>:
-                <span class="review__input-icon review__input-icon--phone" aria-label="Иконка телефона"></span>
-              </label>
-              <input class="review__text-field" type="tel" name="contact-phone" id="contact-phone" placeholder="Введите телефон" required>
-              <label class="review__control" for="contact-email">
-                Электронная почта<sup>*</sup>:
-                <span class="review__input-icon review__input-icon--email" arai-label="Иконка конверта для письма"></span>
-              </label>
-              <input class="review__text-field" type="email" name="contact-email" id="contact-email" placeholder="Введите e-mail" required>
-            </fieldset>
-            <fieldset class="review__field-group review__field-group--impression">
-              <legend class="review__title">Ваше общее впечатление:</legend>
+            <div class="review__field-group review__field-group--name">
+              <h3 class="review__title">Представьтесь:</h3>
+              <div class="review__field-wrapper">
+                <label class="review__control" for="name">
+                  Имя*:
+                </label>
+                <input class="review__text-field" type="text" name="name" id="name" placeholder="Введите ваше имя" value="Пётр" required>
+                <label class="review__control" for="surname">
+                  Фамилия*:
+                </label>
+                <input class="review__text-field" type="text" name="surname" id="surname" placeholder="Введите вашу фамилию" value="Пустота" required>
+                <label class="review__control" for="patronymic">
+                  Отчество:
+                </label>
+                <input class="review__text-field" type="text" name="patronymic" id="patronymic" placeholder="Введите ваше отчество" value="Викторович">
+              </div>
+            </div>
+            <div class="review__field-group review__field-group--contact">
+              <h3 class="review__title">Контактная информация:</h3>
+              <div class="review__field-wrapper">
+                <label class="review__control" for="contact-phone">
+                  Контактный телефон*:
+                  <span class="review__input-icon review__input-icon--phone" aria-label="Иконка телефона"></span>
+                </label>
+                <input class="review__text-field" type="tel" name="contact-phone" id="contact-phone" placeholder="Введите телефон" required>
+                <label class="review__control" for="contact-email">
+                  Электронная почта*:
+                  <span class="review__input-icon review__input-icon--email" arai-label="Иконка конверта для письма"></span>
+                </label>
+                <input class="review__text-field" type="email" name="contact-email" id="contact-email" placeholder="Введите e-mail" required>
+              </div>
+            </div>
+            <div class="review__field-group review__field-group--impression">
+              <h3 class="review__title">Ваше общее впечатление:</h3>
               <label class="review__control-label">
                 <input class="review__input-control visually-hidden" type="radio" name="impression" value="positive" checked>
                 <span class="review__input-button review__input-button--radio"></span>
@@ -98,9 +102,9 @@
                 <span class="review__input-button review__input-button--radio"></span>
                 Затрудняюсь ответить
               </label>
-            </fieldset>
-            <fieldset class="review__field-group review__field-group--attraction">
-              <legend class="review__title">Посещенные достопримечательности:</legend>
+            </div>
+            <div class="review__field-group review__field-group--attraction">
+              <h3 class="review__title">Посещенные достопримечательности:</h3>
               <label class="review__control-label review__control-label--capitalize">
                 <input class="review__input-control visually-hidden" type="checkbox" name="bridge-devil" checked>
                 <span class="review__input-button review__input-button--checkbox"></span>
@@ -121,14 +125,14 @@
                 <span class="review__input-button review__input-button--checkbox"></span>
                 Красные скалы
               </label>
-            </fieldset>
-            <fieldset class="review__field-group review__field-group--comment">
-              <legend class="review__title">Опишите свои эмоции:</legend>
+            </div>
+            <div class="review__field-group review__field-group--comment">
+              <h3 class="review__title">Опишите свои эмоции:</h3>
               <label class="visually-hidden" for="comment">Поле ввода комментария:</label>
               <textarea class="review__comment" name="review-comment" id="comment" placeholder="Опишите подробно все свои восторги"></textarea>
-            </fieldset>
+            </div>
             <button class="review__button button" type="submit">Отправить отзыв</button>
-            <span class="review__note"><sup>*</sup> — обязательные поля</span>
+            <span class="review__note">* — обязательные поля</span>
           </form>
         </section>
       </main>
