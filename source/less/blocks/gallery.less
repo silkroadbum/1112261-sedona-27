@@ -17,7 +17,9 @@
 
 .gallery__item {
   position: relative;
-  padding: 0 20px;
+  box-sizing: border-box;
+  padding: 24px 20px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #e5e5e5;
 
   &:first-child {
@@ -51,8 +53,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 20px 15px;
+    padding: 22px 20px 16px;
     background-color: #f2f2f2;
+
+    &--darker-background {
+      background-color: #eaeaea;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -61,6 +67,22 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     bottom: 0;
+
+    &--another-padding {
+      padding: 18px 20px 17px 25px;
+
+      .gallery__title {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+.gallery__description {
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -79,7 +101,6 @@
 
 .gallery__author {
   display: block;
-  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -99,7 +120,11 @@
   color: #000000;
   font-weight: 700;
   text-align: left;
-  padding-left: 10px;
+  padding-left: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 9px;
+  }
 
   @media (min-width: @desktop-width) {
     color: #ffffff;
@@ -112,6 +137,8 @@
   cursor: pointer;
   color: #000000;
   opacity: 0.3;
+  padding: 0;
+  padding-bottom: 4px;
 
   @media (min-width: @desktop-width) {
     color: #ffffff;

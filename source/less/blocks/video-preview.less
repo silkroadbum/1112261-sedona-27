@@ -3,11 +3,11 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding: 58px 60px 40px;
+    padding: 9px 60px 40px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 58px 200px 40px;
+    padding: 58px 200px 86px;
   }
 }
 
@@ -16,6 +16,8 @@
 }
 
 .video-preview__video {
+  display: block;
+
   @media (min-width: @tablet-width) {
     width: 648px;
     height: 500px;
@@ -36,6 +38,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  padding: 0;
 
   &::before {
     content: "";

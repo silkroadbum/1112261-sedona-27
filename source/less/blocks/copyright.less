@@ -1,3 +1,12 @@
+.copyright {
+  width: 280px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+}
+
 .copyright__link {
   display: flex;
   justify-content: center;
@@ -25,8 +34,16 @@
       fill: #b3b3b3;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    justify-content: end;
+  }
 }
 
 .copyright__image {
   margin-left: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 12px;
+  }
 }
