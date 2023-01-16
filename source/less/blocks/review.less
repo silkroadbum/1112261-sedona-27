@@ -18,7 +18,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 64px 102px 104px;
+    padding: 64px 0 104px;
 
     .description__title {
       font-size: 30px;
@@ -28,6 +28,14 @@
 
     .description__text {
       line-height: 22px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 114px 0 69px;
+
+    .description__title {
+      margin-bottom: 30px;
     }
   }
 }
@@ -159,10 +167,59 @@
   @media (min-width: @desktop-width) {
     &--impression {
       grid-template-columns: repeat(3, 1fr);
+      padding: 57px 53px;
+      column-gap: 28px;
+
+      .review__title {
+        margin-bottom: 30px;
+        margin-right: 42px;
+      }
+
+      .review__control-label {
+        width: 280px;
+      }
     }
 
     &--attraction {
-      grid-template-columns: repeat(4, 1fr);
+      padding-top: 17px;
+      padding-right: 45px;
+      padding-left: 45px;
+      grid-template-columns: 224px 224px 207px 184px;
+      column-gap: 10px;
+
+      .review__title {
+        margin-bottom: 43px;
+      }
+    }
+
+    &--name,
+    &--contact {
+      padding-bottom: 14px;
+    }
+
+    &--name {
+      .review__field-wrapper {
+        width: 429px;
+        padding-right: 64px;
+      }
+    }
+
+    &--contact {
+      .review__field-wrapper {
+        padding-left: 64px;
+      }
+
+      .review__title {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    &--comment {
+      padding-top: 63px;
+      width: 768px;
+      margin: 0 auto;
+      margin-bottom: 4px;
     }
   }
 }
@@ -281,6 +338,7 @@
 }
 
 .review__control-label {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   position: relative;
@@ -324,6 +382,11 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 384px;
   }
 }
 
@@ -377,5 +440,25 @@
 
   &--checkbox {
     border-radius: 4px;
+  }
+}
+
+.review__line-break {
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.review__wrapper {
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 768px;
   }
 }

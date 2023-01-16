@@ -50,7 +50,7 @@
           <h2 class="visually-hidden">Форма отзыва</h2>
           <header class="review__header description">
             <p class="description__title">Оставьте свой отзыв</p>
-            <p class="description__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+            <p class="description__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, <span class="review__line-break">а также о посещенных вами достопримечательностях</span></p>
           </header>
           <form class="review__form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="review__field-group review__field-group--name">
@@ -75,12 +75,12 @@
               <div class="review__field-wrapper">
                 <label class="review__control" for="contact-phone">
                   Контактный телефон*:
-                  <span class="review__input-icon review__input-icon--phone" aria-label="Иконка телефона"></span>
+                  <span class="review__input-icon review__input-icon--phone"></span>
                 </label>
                 <input class="review__text-field" type="tel" name="contact-phone" id="contact-phone" placeholder="Введите телефон" required>
                 <label class="review__control" for="contact-email">
                   Электронная почта*:
-                  <span class="review__input-icon review__input-icon--email" arai-label="Иконка конверта для письма"></span>
+                  <span class="review__input-icon review__input-icon--email"></span>
                 </label>
                 <input class="review__text-field" type="email" name="contact-email" id="contact-email" placeholder="Введите e-mail" required>
               </div>
@@ -131,8 +131,10 @@
               <label class="visually-hidden" for="comment">Поле ввода комментария:</label>
               <textarea class="review__comment" name="review-comment" id="comment" placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
-            <button class="review__button button" type="submit">Отправить отзыв</button>
-            <span class="review__note">* — обязательные поля</span>
+            <div class="review__wrapper">
+              <button class="review__button button" type="submit">Отправить отзыв</button>
+              <span class="review__note">* — обязательные поля</span>
+            </div>
           </form>
         </section>
       </main>
