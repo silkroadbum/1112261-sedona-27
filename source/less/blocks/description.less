@@ -78,9 +78,25 @@
   text-transform: uppercase;
   margin-bottom: 35px;
 
+  &--review {
+    margin-bottom: 23px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 21px;
     margin-bottom: 30px;
+
+    &--review {
+      font-size: 30px;
+      line-height: 26px;
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--review {
+      margin-bottom: 32px;
+    }
   }
 }
 
